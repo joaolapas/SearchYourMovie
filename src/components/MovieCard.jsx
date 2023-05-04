@@ -3,7 +3,7 @@ import React from "react";
 const MovieCard = ({ id, path, title, rating, year }) => {
   if (path) {
     return (
-      <div className="h-full">
+      <div className='h-96'>
         <img
           className="max-h-60 w-full"
           src={`https://image.tmdb.org/t/p/w200${path}`}

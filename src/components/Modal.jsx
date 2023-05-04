@@ -39,7 +39,7 @@ const Modal = ({ id, isOpen, handleCloseModal }) => {
   return (
     <div className="flex overflow-scroll flex-col items-center fixed bg-black rounded-3xl z-10 top-0 bottom-0 right-0 left-0 sm:top-5 sm:bottom-5 sm:left-10 sm:right-10 sm:p-10 sm:px-20">
       <div className="flex justify-between flex-wrap h-5/6 w-10/12 mt-28 lg:mt-0">
-        <div className="w-11/12 sm:w-6/12 text-center">
+        <div className="w-11/12 sm:w-6/12 text-center md:text-left">
           <h1 className="text-2xl sm:text-4xl text-slate-50 mb-10">
             {details.original_title}
           </h1>
