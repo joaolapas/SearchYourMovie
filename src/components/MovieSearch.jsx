@@ -80,9 +80,9 @@ const MovieSearch = () => {
           <Modal id={id} isOpen={isOpen} handleCloseModal={handleCloseModal} />
         )}
       </div>
-      <form className="w-2/4 text-center" onSubmit={handleSubmit}>
+      <form className="text-center" onSubmit={handleSubmit}>
         <input
-          className="border-2 border-slate-50 rounded-full px-5 mx-2 text-slate-700"
+          className="border-2 border-slate-50 rounded-full px-5 m-2 text-slate-700"
           type="text"
           onChange={(e) => setMovie(e.target.value)}
           required
@@ -111,7 +111,7 @@ const MovieSearch = () => {
                 Filter by Year
               </button>
             </div>
-            <div>
+            <div className="sm:ml-20">
               <button
                 className="border-2 border-slate-50 rounded-full px-5 hover:bg-slate-50 hover:transition-all transition-all"
                 onClick={async () => await fetchingLatest()}
