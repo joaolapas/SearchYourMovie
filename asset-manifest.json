@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/SearcYourMovie/static/css/main.cc2d4140.css",
-    "main.js": "/SearcYourMovie/static/js/main.348cde54.js",
-    "index.html": "/SearcYourMovie/index.html",
-    "main.cc2d4140.css.map": "/SearcYourMovie/static/css/main.cc2d4140.css.map",
-    "main.348cde54.js.map": "/SearcYourMovie/static/js/main.348cde54.js.map"
+    "main.css": "/SearchYourMovie/static/css/main.cc2d4140.css",
+    "main.js": "/SearchYourMovie/static/js/main.348cde54.js",
+    "index.html": "/SearchYourMovie/index.html",
+    "main.cc2d4140.css.map": "/SearchYourMovie/static/css/main.cc2d4140.css.map",
+    "main.348cde54.js.map": "/SearchYourMovie/static/js/main.348cde54.js.map"
   },
   "entrypoints": [
     "static/css/main.cc2d4140.css",
