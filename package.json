@@ -1,7 +1,7 @@
 {
-  "name": "datamovie",
+  "name": "Serach Your Movie",
   "version": "0.1.0",
-  "homepage": "https://joaolapas.github.io/SearcYourMovie",
+  "homepage": "https://joaolapas.github.io/SearchYourMovie",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
