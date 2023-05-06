@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
 const MovieCard = ({ id, path, title, rating, year }) => {
+  const [hover, setHover] = useState(false);
   if (path) {
     return (
-      <div className='h-96'>
+      <div
+        className="h-80 relative"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
         <img
-          className="max-h-60 w-full"
+          className="absolute h-full w-full"
+          alt="movie poster"
           src={`https://image.tmdb.org/t/p/w200${path}`}
         />
-        <div className="flex flex-col justify-between text-center h-32 px-5">
-          <h3 className="font-bold">{title}</h3>
+        <div
+          className={`absolute top-0 h-full w-full text-center p-10 transition-all ease-in-out duration-900 bg-opacity-80 bg-neutral-900 ${
+            hover ? null : "hidden"
+          }`}
+        >
+          <h3 className="font-bold text-xl h-3/4">{title}</h3>
           <h5 className="text-red-500">{year}</h5>
           <h5 className="text-red-500">
             Rating: <span className="text-slate-50">{rating}</span>/10

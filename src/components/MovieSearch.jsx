@@ -69,7 +69,7 @@ const MovieSearch = () => {
   }, [page]);
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center px-40">
       <div
         className="modal"
         style={{
@@ -80,22 +80,23 @@ const MovieSearch = () => {
           <Modal id={id} isOpen={isOpen} handleCloseModal={handleCloseModal} />
         )}
       </div>
-      <form className="text-center" onSubmit={handleSubmit}>
+      <form className="flex flex-col items-center" onSubmit={handleSubmit}>
+      <div className="bg-slate-50 flex flex-nowrap items-center rounded-full px-1 transition-all ease-in-out duration-900 w-sm">
         <input
-          className="border-2 border-slate-50 rounded-full px-5 m-2 text-slate-700"
+          className="focus:outline-none border-slate-50 rounded-full px-5 m-2 text-slate-700 text-xl w-sm"
           type="text"
           onChange={(e) => setMovie(e.target.value)}
           required
         />
         <button
-          className="border-2 border-slate-50 rounded-full px-5 hover:bg-slate-50 hover:transition-all transition-all"
+          className="border-2 bg-red-500 text-neutral-700 h-10 border-slate-50 rounded-full px-5 hover:bg-slate-50 hover:transition-all transition-all"
           type="submit"
         >
           Search
-        </button>
+        </button></div>
         {result.length !== 0 && (
           <div className="flex justify-between mt-6">
-            <div>
+            <div className="flex justify-center flex-wrap" >
               <input
                 className="border-2 border-slate-50 rounded-full px-3 mx-2 text-slate-700"
                 type="number"
@@ -111,7 +112,7 @@ const MovieSearch = () => {
                 Filter by Year
               </button>
             </div>
-            <div className="sm:ml-20">
+            <div className="sm:ml-20 flex flex-wrap justify-center">
               <button
                 className="border-2 border-slate-50 rounded-full px-5 hover:bg-slate-50 hover:transition-all transition-all"
                 onClick={async () => await fetchingLatest()}
@@ -134,12 +135,12 @@ const MovieSearch = () => {
           </div>
         )}
       </form>
-      <div className="flex w-11/12 flex-wrap gap-6 my-10 justify-center">
+      <div className="flex w-full sm:w-10/12 flex-wrap gap-6 my-10 justify-center">
         {result.length !== 0
           ? result.map((result) => {
               return (
                 <div
-                  className="flex flex-col h-100 w-40 rounded-2xl overflow-hidden text-slate-50 shadow-lg shadow-black flex-wrap hover:scale-110 transition-all hover:cursor-pointer"
+                  className="flex shrink-0 flex-col w-52 rounded-2xl overflow-hidden text-slate-50 shadow-lg shadow-black flex-wrap hover:scale-110 transition-all ease-in duration-800 hover:cursor-pointer"
                   key={result.id}
                   onClick={() => handleOpenModal(result.id)}
                 >

@@ -2,8 +2,8 @@ import MovieSearch from "./components/MovieSearch";
 
 function App() {
   return (
-    <div className="flex flex-col w-full items-center bg-neutral-800 text-red-500 h-fit">
-      <div className="flex flex-col w-full items-center min-h-screen">
+    <div className="flex flex-col w-full items-center bg-[url('/src/assets/cinema.jpg')] bg-cover text-red-500 h-fit">
+      <div className="flex flex-col w-full items-center  justify-center min-h-screen">
         <a href='/SearchYourMovie/'><h1 className="text-2xl sm:text-6xl my-8">
           Search<span className="text-slate-50">Your</span>Movie
         </h1></a>
