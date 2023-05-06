@@ -69,7 +69,7 @@ const MovieSearch = () => {
   }, [page]);
 
   return (
-    <div className="w-full flex flex-col items-center px-40">
+    <div className="w-full flex flex-col items-center px-40 scale-75 sm:scale-100">
       <div
         className="modal"
         style={{
