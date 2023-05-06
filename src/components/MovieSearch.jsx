@@ -69,7 +69,7 @@ const MovieSearch = () => {
   }, [page]);
 
   return (
-    <div className="flex flex-col items-center px-40">
+    <div className="flex flex-col items-center px-40 w-3/4 sm:w-screen">
       <div
         className="modal"
         style={{
@@ -80,23 +80,27 @@ const MovieSearch = () => {
           <Modal id={id} isOpen={isOpen} handleCloseModal={handleCloseModal} />
         )}
       </div>
-      <form className="flex flex-col items-center scale-75 sm:scale-100" onSubmit={handleSubmit}>
-      <div className="bg-slate-50 flex flex-nowrap items-center rounded-full px-1 transition-all ease-in-out duration-900 w-sm">
-        <input
-          className="focus:outline-none border-slate-50 rounded-full px-5 m-2 text-slate-700 text-xl w-sm"
-          type="text"
-          onChange={(e) => setMovie(e.target.value)}
-          required
-        />
-        <button
-          className="border-2 bg-red-500 text-neutral-700 h-10 border-slate-50 rounded-full px-5 hover:bg-slate-50 hover:transition-all transition-all"
-          type="submit"
-        >
-          Search
-        </button></div>
+      <form
+        className="flex flex-col items-center scale-75 sm:scale-100"
+        onSubmit={handleSubmit}
+      >
+        <div className="bg-slate-50 flex flex-nowrap items-center rounded-full px-1 transition-all ease-in-out duration-900 w-sm">
+          <input
+            className="focus:outline-none border-slate-50 rounded-full px-5 m-2 text-slate-700 text-xl w-sm"
+            type="text"
+            onChange={(e) => setMovie(e.target.value)}
+            required
+          />
+          <button
+            className="border-2 bg-red-500 text-neutral-700 h-10 border-slate-50 rounded-full px-5 hover:bg-slate-50 hover:transition-all transition-all"
+            type="submit"
+          >
+            Search
+          </button>
+        </div>
         {result.length !== 0 && (
           <div className="flex justify-between mt-6">
-            <div className="flex justify-center flex-wrap" >
+            <div className="flex justify-center flex-wrap">
               <input
                 className="border-2 border-slate-50 rounded-full px-3 mx-2 text-slate-700"
                 type="number"
@@ -154,9 +158,11 @@ const MovieSearch = () => {
                 </div>
               );
             })
-          : totalPages !== 0 && <h1 className='text-3xl text-slate-50' >No movies found!</h1>}
+          : totalPages !== 0 && (
+              <h1 className="text-3xl text-slate-50">No movies found!</h1>
+            )}
       </div>
-      {totalPages !== 0 && result.length !== 0 &&
+      {totalPages !== 0 && result.length !== 0 && (
         <div className="flex w-10/12 justify-around">
           <button
             className="border-2 border-slate-50 rounded-full px-5 hover:bg-slate-50 hover:transition-all transition-all my-10"
@@ -165,7 +171,8 @@ const MovieSearch = () => {
           >
             Prev
           </button>
-          <div className="my-10">{page}/{totalPages}
+          <div className="my-10">
+            {page}/{totalPages}
           </div>
 
           <button
@@ -176,7 +183,7 @@ const MovieSearch = () => {
             Next
           </button>
         </div>
-      }
+      )}
     </div>
   );
 };
