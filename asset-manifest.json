@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/SearchYourMovie/static/css/main.5e65f1c4.css",
-    "main.js": "/SearchYourMovie/static/js/main.0ff1aced.js",
+    "main.css": "/SearchYourMovie/static/css/main.970c6a9a.css",
+    "main.js": "/SearchYourMovie/static/js/main.0b3bd210.js",
     "static/media/cinema.jpg": "/SearchYourMovie/static/media/cinema.3c83718adc007efdc3db.jpg",
     "index.html": "/SearchYourMovie/index.html",
-    "main.5e65f1c4.css.map": "/SearchYourMovie/static/css/main.5e65f1c4.css.map",
-    "main.0ff1aced.js.map": "/SearchYourMovie/static/js/main.0ff1aced.js.map"
+    "main.970c6a9a.css.map": "/SearchYourMovie/static/css/main.970c6a9a.css.map",
+    "main.0b3bd210.js.map": "/SearchYourMovie/static/js/main.0b3bd210.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e65f1c4.css",
-    "static/js/main.0ff1aced.js"
+    "static/css/main.970c6a9a.css",
+    "static/js/main.0b3bd210.js"
   ]
 }
