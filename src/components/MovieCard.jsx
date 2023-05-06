@@ -36,7 +36,7 @@ const MovieCard = ({ id, path, title, rating, year }) => {
         >
           
           <div
-            className={`absolute top-0 h-full w-full text-center p-10 transition-all ease-in-out duration-900 bg-opacity-80 bg-neutral-900`}
+            className={`absolute top-0 h-full w-full text-center p-10 sm:transition-all sm:ease-in-out sm:duration-900 sm:bg-opacity-80 sm:bg-neutral-900`}
           >
             <h3 className="font-bold text-xl h-3/4">{title}</h3>
             <h5 className="text-red-500">{year}</h5>

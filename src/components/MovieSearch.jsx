@@ -69,7 +69,7 @@ const MovieSearch = () => {
   }, [page]);
 
   return (
-    <div className="w-full flex flex-col items-center px-40 scale-75 sm:scale-100">
+    <div className="flex flex-col items-center px-40">
       <div
         className="modal"
         style={{
@@ -80,7 +80,7 @@ const MovieSearch = () => {
           <Modal id={id} isOpen={isOpen} handleCloseModal={handleCloseModal} />
         )}
       </div>
-      <form className="flex flex-col items-center" onSubmit={handleSubmit}>
+      <form className="flex flex-col items-center scale-75 sm:scale-100" onSubmit={handleSubmit}>
       <div className="bg-slate-50 flex flex-nowrap items-center rounded-full px-1 transition-all ease-in-out duration-900 w-sm">
         <input
           className="focus:outline-none border-slate-50 rounded-full px-5 m-2 text-slate-700 text-xl w-sm"
@@ -140,7 +140,7 @@ const MovieSearch = () => {
           ? result.map((result) => {
               return (
                 <div
-                  className="flex shrink-0 flex-col w-52 rounded-2xl overflow-hidden text-slate-50 shadow-lg shadow-black flex-wrap hover:scale-110 transition-all ease-in duration-800 hover:cursor-pointer"
+                  className="flex shrink-0 flex-col w-52 rounded-2xl overflow-hidden text-slate-50 shadow-lg shadow-black flex-wrap sm:hover:scale-110 transition-all ease-in duration-800 hover:cursor-pointer"
                   key={result.id}
                   onClick={() => handleOpenModal(result.id)}
                 >
